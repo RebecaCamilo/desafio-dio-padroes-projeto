@@ -23,16 +23,3 @@ public class SingletonLazy {
 }
 
 
-/*
- * PADRÕES DE PROJETO
- * 
- * Singleton <Padrão Criacional> Permitir a criação d euma unica instancia de
- * classe e fornecer um modo para recupera-la.
- * 
- * Strategy <Padrão Comportamental> Simplificar a variação de algoritmos para a
- * resolução de um mesmo problema.
- * 
- * Facade <Padrão Estrutural> Prover uma interface que reduza a complexidade nas
- * integrações com subsistemas.
- * 
- */
