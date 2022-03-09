@@ -1,5 +1,6 @@
 package projectPatterns;
 
+import projectPatterns.facade.Facade;
 import projectPatterns.singleton.SingletonEager;
 import projectPatterns.singleton.SingletonLazy;
 import projectPatterns.singleton.SingletonLazyHolder;
@@ -13,6 +14,8 @@ public class Drive {
 
 	public static void main(String[] args) {
 
+//		Singleton <Padrão Criacional> Permitir a criação d euma unica instancia de classe e fornecer um modo para recupera-la.
+		
 //		SingletonLazy lazy = new SingletonLazy(); <- não funciona pois seu construtor é private!
 		SingletonLazy lazy = SingletonLazy.getInstancia();
 		System.out.println(lazy);
@@ -34,6 +37,9 @@ public class Drive {
 		
 		
 		
+		
+//		Strategy <Padrão Comportamental> Simplificar a variação de algoritmos para a resolução de um mesmo problema.
+		
 		Comportamento normal = new ComportamentoNormal();
 		Comportamento agressivo = new ComportamentoAgressivo();
 		Comportamento defensivo = new ComportamentoDefensivo();
@@ -49,6 +55,13 @@ public class Drive {
 		robo.mover();
 		robo.mover();
 		robo.mover();
+		
+		
+		
+//		Facade <Padrão Estrutural> Prover uma interface que reduza a complexidade nas integrações com subsistemas.
+		
+		Facade facade =  new Facade();
+		facade.migrarCliente("Rebeca", "019283");
 		
 	}
 
