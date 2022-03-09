@@ -3,6 +3,11 @@ package projectPatterns;
 import projectPatterns.singleton.SingletonEager;
 import projectPatterns.singleton.SingletonLazy;
 import projectPatterns.singleton.SingletonLazyHolder;
+import projectPatterns.strategy.Comportamento;
+import projectPatterns.strategy.ComportamentoAgressivo;
+import projectPatterns.strategy.ComportamentoDefensivo;
+import projectPatterns.strategy.ComportamentoNormal;
+import projectPatterns.strategy.Robo;
 
 public class Drive {
 
@@ -24,9 +29,26 @@ public class Drive {
 		SingletonLazyHolder holder = SingletonLazyHolder.getInstancia();
 		System.out.println(holder);
 		holder = SingletonLazyHolder.getInstancia();
-		System.out.println(holder);
-		
+		System.out.println(holder);		
 		// Sempre guardam o mesmo endereço de memoria
+		
+		
+		
+		Comportamento normal = new ComportamentoNormal();
+		Comportamento agressivo = new ComportamentoAgressivo();
+		Comportamento defensivo = new ComportamentoDefensivo();
+		
+		Robo robo = new Robo();
+		
+		robo.setStrategyComportamental(normal);
+		robo.mover();
+		robo.mover();
+		robo.setStrategyComportamental(agressivo);
+		robo.mover();
+		robo.setStrategyComportamental(defensivo);
+		robo.mover();
+		robo.mover();
+		robo.mover();
 		
 	}
 
